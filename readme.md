@@ -10,14 +10,11 @@ A simple Python-based ATM simulation that lets users check balance and withdraw 
 - [x] Account Type Selection (Current / Savings)
 - [x] Balance Inquiry
 - [x] Cash Withdrawal (Predefined + Custom Amounts)
+- [X] Cash Deposit (Custom Amounts) 
 - [x] Daily Limit Check
 - [x] Insufficient Balance Handling
 - [x] Basic Input Validation (Invalid options)
 
 ---
 
-## 📝 Features To Be Added
 
-- [ ] Open Account (User Registration)
-- [ ] Cash Deposit
-- [ ] Mini Statement (Recent Transactions)
