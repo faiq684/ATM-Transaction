@@ -2,6 +2,8 @@ card_holder_name = "Faiq Ahmad"
 card_pin = 7356
 account_balance = 100000
 daily_account_limit = 100000
+CNIC_number = (3460381511307)
+account_number = 291009176257
 
 pin_user_input = int(input("Enter Your Pin :"))
 
@@ -16,7 +18,8 @@ if pin_user_input == card_pin:
         print("\nSelect Transaction Type :")
         print("1: Balance Inquiry")
         print("2: Cash Withdrawal")
-        transaction_choice = int(input("Enter Your Choice (1 or 2):"))
+        print("3: Cash Deposit")
+        transaction_choice = int(input("Enter Your Choice (1-3):"))
 
         if transaction_choice == 1:
             print(f"Your Account Balance is {account_balance}")
@@ -29,6 +32,26 @@ if pin_user_input == card_pin:
             print("4: RS 20000")
             print("5: RS 50000")
             print("6: Enter Your Amount")
+        
+        elif transaction_choice == 3:
+            input_cnic = (int(input("Enter Your CNIC Number :")))
+            if input_cnic == CNIC_number:
+                input_account_number = (int(input("Enter Your Account Number :")))
+                if input_account_number == account_number:
+                    deposit_money = (int(input("Enter the money you want to deposit :")))
+                    print("Money Deposit Successfull!")
+                    new_account_balance = deposit_money + account_balance
+                    print(f'Your Account Balance is {new_account_balance}')
+                
+                else:
+                    print("Invalid Account Number, Please try again")
+                exit()    
+            
+            else:
+                print("Invalid CNIC Number, Please try again")
+            exit()            
+            
+              
 
             amount_choice = input("Enter your Choice (1-6): ")
 
