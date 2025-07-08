@@ -32,6 +32,30 @@ if pin_user_input == card_pin:
             print("4: RS 20000")
             print("5: RS 50000")
             print("6: Enter Your Amount")
+            
+            amount_choice = input("Enter your Choice (1-6): ")
+
+            if amount_choice == "1":
+                "withdraw_amount" == 1000
+                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
+            elif amount_choice == "2":
+                "withdraw_amount" == 5000
+                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
+            elif amount_choice == "3":
+                "withdraw_amount" == 10000
+                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
+            elif amount_choice == "4":
+                "withdraw_amount" == 20000
+                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
+            elif amount_choice == "5":
+                "withdraw_amount" == 50000
+                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
+            elif amount_choice == "6":
+                "withdraw_amount" == int(input("Enter the amount you want to withdraw :"))
+                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
+            else:
+                print("Invalid Option")
+                exit()
         
         elif transaction_choice == 3:
             input_cnic = (int(input("Enter Your CNIC Number :")))
@@ -51,27 +75,8 @@ if pin_user_input == card_pin:
                 print("Invalid CNIC Number, Please try again")
             exit()            
             
-              
-
-            amount_choice = input("Enter your Choice (1-6): ")
-
-            if amount_choice == "1":
-                withdraw_amount = 1000
-            elif amount_choice == "2":
-                withdraw_amount = 5000
-            elif amount_choice == "3":
-                withdraw_amount = 10000
-            elif amount_choice == "4":
-                withdraw_amount = 20000
-            elif amount_choice == "5":
-                withdraw_amount = 50000
-            elif amount_choice == "6":
-                withdraw_amount = int(input("Enter the amount you want to withdraw :"))
-            else:
-                print("Invalid Option")
-                exit()
-
             
+                      
             if withdraw_amount > account_balance:
                 print("Insufficient Balance!")
             elif withdraw_amount > daily_account_limit:
