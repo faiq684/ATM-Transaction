@@ -34,69 +34,122 @@ if pin_user_input == card_pin:
             print("6: Enter Your Amount")
             
             amount_choice = input("Enter your Choice (1-6): ")
+            if amount_choice in ["1", "2", "3", "4", "5", "6"]:
+                
+                if amount_choice == "1":
+                    withdraw_amount = 1000
+                    print("Do you want a printed receipt?")
+                    print("1: Yes")
+                    print("2: No")
+                    input_receipt = input("Enter your choice :")
+                    if input_receipt == "1":
+                        import datetime
+                        now = datetime.datetime.now()
+                        print(f'Transaction Time: {now}')
+                        print(f"Transaction amount: {withdraw_amount}")
+                        rem_balance = account_balance - withdraw_amount
+                        print(f"Your remaining balance is {rem_balance} ")
+                        exit()
+                          
+                if amount_choice == "2":
+                    withdraw_amount = 5000     
+                    print("Do you want a printed receipt?")
+                    print("1: Yes")
+                    print("2: No")
+                    input_receipt = input("Enter your choice :")
+                    if input_receipt == "1":
+                        import datetime
+                        now = datetime.datetime.now()
+                        print(f'Transaction Time: {now}')
+                        print(f"Transaction amount: {withdraw_amount}")
+                        rem_balance = account_balance - withdraw_amount
+                        print(f"Your remaining balance is {rem_balance} ")
+                        exit()
+                    
+                if amount_choice == "3":
+                    withdraw_amount = 10000
+                    print("Do you want a printed receipt?")
+                    print("1: Yes")
+                    print("2: No")
+                    input_receipt = input("Enter your choice :")
+                    if input_receipt == "1":
+                        import datetime
+                        now = datetime.datetime.now()
+                        print(f'Transaction Time: {now}')
+                        print(f"Transaction amount: {withdraw_amount}")
+                        rem_balance = account_balance - withdraw_amount
+                        print(f"Your remaining balance is {rem_balance} ")
+                        exit()
+                    
+                if amount_choice == "4":
+                    withdraw_amount = 20000
+                    print("Do you want a printed receipt?")
+                    print("1: Yes")
+                    print("2: No")
+                    input_receipt = input("Enter your choice :")
+                    if input_receipt == "1":
+                        import datetime
+                        now = datetime.datetime.now()
+                        print(f'Transaction Time: {now}')
+                        print(f"Transaction amount: {withdraw_amount}")
+                        rem_balance = account_balance - withdraw_amount
+                        print(f"Your remaining balance is {rem_balance} ")
+                        exit()
+                
+                if amount_choice == "5":
+                    withdraw_amount = 50000
+                    print("Do you want a printed receipt?")
+                    print("1: Yes")
+                    print("2: No")
+                    input_receipt = input("Enter your choice :")
+                    if input_receipt == "1":
+                        import datetime
+                        now = datetime.datetime.now()
+                        print(f'Transaction Time: {now}')
+                        print(f"Transaction amount: {withdraw_amount}")
+                        rem_balance = account_balance - withdraw_amount
+                        print(f"Your remaining balance is {rem_balance} ")
+                        exit()
+                    
+                if amount_choice == "6":
+                    withdraw_amount = int(input("Enter the amount you want to withdraw: "))
+                    print("Do you want a printed receipt?")
+                    print("1: Yes")
+                    print("2: No")
+                    input_receipt = input("Enter your choice: ")
+                    if input_receipt == "1":
+                        import datetime
+                        now = datetime.datetime.now()
+                        print(f"Transaction Time: {now}")
+                        print(f"Transaction amount: {withdraw_amount}")
+                        rem_balance = account_balance - withdraw_amount
+                        print(f"Your remaining balance is {rem_balance}")
+                        exit()
 
-            if amount_choice == "1":
-                "withdraw_amount" == 1000
-                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
-            elif amount_choice == "2":
-                "withdraw_amount" == 5000
-                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
-            elif amount_choice == "3":
-                "withdraw_amount" == 10000
-                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
-            elif amount_choice == "4":
-                "withdraw_amount" == 20000
-                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
-            elif amount_choice == "5":
-                "withdraw_amount" == 50000
-                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
-            elif amount_choice == "6":
-                "withdraw_amount" == int(input("Enter the amount you want to withdraw :"))
-                print(f'Transaction Successfull! Thank You for using our ATM, Goodbye')
-            else:
-                print("Invalid Option")
-                exit()
-        
+                    if withdraw_amount > account_balance:
+                        print("Insufficient Balance")
+                    elif withdraw_amount > daily_account_limit:
+                        print("Your daily limit has exceeded")
+
         elif transaction_choice == 3:
-            input_cnic = (int(input("Enter Your CNIC Number :")))
+            input_cnic = int(input("Enter Your CNIC Number :"))
             if input_cnic == CNIC_number:
-                input_account_number = (int(input("Enter Your Account Number :")))
+                input_account_number = int(input("Enter Your Account Number :"))
                 if input_account_number == account_number:
-                    deposit_money = (int(input("Enter the money you want to deposit :")))
-                    print("Money Deposit Successfull!")
+                    deposit_money = int(input("Enter the money you want to deposit :"))
+                    print("Money Deposit Successful!")
                     new_account_balance = deposit_money + account_balance
                     print(f'Your Account Balance is {new_account_balance}')
-                
                 else:
                     print("Invalid Account Number, Please try again")
-                exit()    
-            
+                    exit()
             else:
                 print("Invalid CNIC Number, Please try again")
-            exit()            
-            
-            
-                      
-            if withdraw_amount > account_balance:
-                print("Insufficient Balance!")
-            elif withdraw_amount > daily_account_limit:
-                print("Your Daily Limit has been exceeded!")
-            else:
-                print("Transaction Successful!")
-                remaining_balance = account_balance - withdraw_amount
-                print(f"Remaining Balance: {remaining_balance}")
-
-        else:
-            print("Invalid transaction option.")
-
+                exit()
     else:
         print("Invalid account type.")
-
 else:
     print("Incorrect Pin, Try again.")
-
-    
-  
            
                     
             
