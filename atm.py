@@ -22,7 +22,20 @@ if pin_user_input == card_pin:
         transaction_choice = int(input("Enter Your Choice (1-3):"))
 
         if transaction_choice == 1:
-            print(f"Your Account Balance is {account_balance}")
+            inq_receipt = print("Do you want a Printed Receipt (1 or 2)")
+            print("1: Yes")
+            print("2: No")
+            inq_receipt_input = input("Enter Your Choice :")
+            if inq_receipt_input == "1":
+                import datetime
+                dt_time = datetime.datetime.now()
+                print(f"Transaction time : {dt_time}")
+                print(f"Your Account Balance is : {account_balance}")
+            else:
+                print(f"Your account balance is : {account_balance}")
+                print("Thank You for using our ATM")
+                exit()    
+            
 
         elif transaction_choice == 2:
             print("\nChoose the amount you want to withdraw :")
